@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Series y Películas</title>
+  <link rel="stylesheet" href="./CSS/nav.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- NAV -->
+  <div class="container-header">
+    <header>
+      <div class="section-logo">
+        <a href="#"><span>CINE</span>FAST</a>
+      </div>
+      <!-- Botón Hamburguesa -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <nav class="nav">
+        <ul>
+          <li><a href="./index.html" class="activo">Inicio</a></li>
+          <li><a href="./series.html">Series</a></li>
+          <li><a href="./peliculas.html">Películas</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- SECCIÓN DE PRESENTACIÓN -->
+  <section class="intro-section">
+    <h1>Disfruta del mejor <span>cine</span> y <span>series</span></h1>
+    <p>Explora el catálogo más completo de <strong>CINEFAST</strong> con los estrenos y clásicos que más te gustan.</p>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="split-screen">
+    <section class="left">
+      <video class="bg-video" src="./Videos/peliculas.mp4" muted loop></video>
+      <div class="overlay">
+        <a href="./peliculas.html" class="btn">Películas</a>
+      </div>
+    </section>
+      
+    <section class="right">
+      <video class="bg-video" src="./Videos/series.mp4" muted loop></video>
+      <div class="overlay">
+        <a href="./series.html" class="btn">Series</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Suscríbete a nuestro boletín para recibir actualizaciones</h2>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Ingresa tu correo aquí" required>
+      <button type="submit">Suscribirse</button>
+    </form>
+  </section>
+
+  <!-- Footer exclusivo del index -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section logo">
+        <h2><span>CINE</span>FAST</h2>
+        <p>Películas y Series Online</p>
+      </div>
+
+      <div class="footer-section about">
+        <h3>SOBRE NOSOTROS</h3>
+        <p>
+          Somos una plataforma dedicada a compartir información, reseñas 
+          y recomendaciones de películas y series. 
+        </p>
+        <p>
+          Disfruta de contenido actualizado y de calidad pensado para ti.
+        </p>
+      </div>
+
+      <div class="footer-section social">
+        <h3>SÍGUENOS</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 <span>CINEFAST</span> - Todos los Derechos Reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./JS/main.js"></script>
+</body>
+</html>

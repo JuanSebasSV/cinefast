@@ -1,0 +1,111 @@
+/* === FOOTER GLOBAL MODERNO - CINEFAST === */
+footer {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+  color: #fff;
+  text-align: center;
+  padding: 60px 25px 30px;
+  font-family: 'Work Sans', sans-serif;
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Efecto de brillo suave superior */
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #e50914, transparent);
+  animation: glowline 4s linear infinite;
+}
+
+@keyframes glowline {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Contenedor general */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LOGO */
+.footer-logo {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.footer-logo span:first-child {
+  color: #e50914;
+}
+
+.footer-logo span:last-child {
+  color: #fff;
+}
+
+/* Descripción */
+.footer-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 18px auto 28px;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* Redes sociales */
+.footer-socials {
+  margin: 25px 0;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin: 0 12px;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #e50914;
+  transform: translateY(-3px) scale(1.15);
+}
+
+/* Línea inferior */
+.footer-bottom {
+  margin-top: 45px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 14px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.3px;
+}
+
+/* Pequeña animación de resplandor en el logo */
+.footer-logo:hover {
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .footer-logo {
+    font-size: 2rem;
+  }
+  .footer-description {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  .footer-socials a {
+    font-size: 1.3rem;
+    margin: 0 9px;
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - CINEFAST</title>
+
+  <link rel="stylesheet" href="./CSS/nav.css" />
+  <link rel="stylesheet" href="./CSS/contacto.css" />
+  <link rel="stylesheet" href="./CSS/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d5bcd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- NAV GLOBAL -->
+  <div class="container-header">
+    <header>
+      <div class="section-logo">
+        <a href="#"><span>CINE</span>FAST</a>
+      </div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./peliculas.html">Películas</a></li>
+          <li><a href="./series.html">Series</a></li>
+          <li><a href="./contacto.html" class="activo">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <h1>Contáctanos</h1>
+      <p class="subtitle">Tu opinión nos importa — comparte tus comentarios o sugerencias.</p>
+
+      <!-- FOTOS DEL EQUIPO -->
+      <div class="team-photos">
+        <div class="photo" style="background-image: url('./IMG/persona1.png');"></div>
+        <div class="photo" style="background-image: url('./IMG/persona2.jpg');"></div>
+        <div class="photo" style="background-image: url('./IMG/persona3.jpg');"></div>
+      </div>
+
+      <!-- FORMULARIO -->
+      <form class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">Nombre</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Apellido</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Tu apellido" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Comentarios o sugerencias</label>
+          <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <h2 class="footer-logo"><span>CINE</span><span>FAST</span></h2>
+      <p class="footer-description">
+        Tu opinión nos ayuda a mejorar y ofrecerte la mejor experiencia en entretenimiento.
+      </p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-bottom">
+        © 2025 CINEFAST. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="./JS/main.js"></script>
+</body>
+</html>

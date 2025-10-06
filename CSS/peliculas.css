@@ -1,0 +1,159 @@
+body {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url(../IMG/fondo_index.jpg) no-repeat center center fixed;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  font-family: 'Work Sans', Arial, sans-serif;
+  color: #fff;
+}
+
+.catalogo-s {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 120px 100px;
+  box-sizing: border-box;
+}
+
+.img-box {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  width: 350px;
+}
+
+.img-box img {
+  display: block;
+  height: 550px;
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 1;
+  -webkit-user-drag: none;
+  object-fit: cover;
+}
+
+.img-box:hover img {
+  transform: scale(1.06);
+}
+
+.img-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.descripcion {
+  position: absolute;
+  bottom: 22px;
+  left: 20px;
+  right: 20px;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 3;
+  pointer-events: auto;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.descripcion h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  font-family: 'Righteous', sans-serif;
+}
+
+.descripcion p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.25;
+  opacity: 0.95;
+  max-height: 3.3em;
+  overflow: hidden;
+}
+
+.img-box:hover::after {
+  opacity: 1;
+}
+
+.img-box:hover .descripcion {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.calificacion {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+}
+
+.calificacion i {
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.calificacion i.fa-thumbs-up:hover {
+  color: #4CAF50;
+  transform: scale(1.2);
+}
+
+.calificacion i.fa-thumbs-down:hover {
+  color: #E53935;
+  transform: scale(1.2);
+}
+
+.rating {
+  font-size: 16px;
+  color: gold;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .img-box img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogo-s {
+    padding: 30px 16px;
+    gap: 20px;
+  }
+
+  .img-box {
+    width: 250px;
+  }
+
+  .img-box img {
+    height: 320px;
+  }
+
+  .descripcion h3 { font-size: 16px; }
+  .descripcion p { font-size: 12px; }
+
+  .container-header header nav ul {
+    position: absolute !important;
+    top: 70px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(6px) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+  }
+}

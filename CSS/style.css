@@ -1,0 +1,264 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* PANTALLA DIVIDIDA */
+.split-screen {
+  display: flex;
+  height: calc(100vh - 70px); /* resta altura del nav */
+}
+
+.split-screen section {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Video de fondo */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+  pointer-events: none; /* evita que bloquee el hover */
+}
+
+/* Reproduce al pasar el mouse */
+.bg-video {
+  opacity: 0.3;
+  transition: opacity 0.4s;
+}
+
+section:hover .bg-video {
+  opacity: 0.9;
+}
+
+/* Botones centrales */
+.overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  background: #e50914;
+  border-color: #e50914;
+  transform: scale(1.1);
+}
+
+/* Fondo negro al hacer scroll */
+main {
+  background: #000;
+}
+
+/* Opcional: keyframe para arranque */
+@keyframes playVideo {
+  from { opacity: 0.3; }
+  to { opacity: 0.9; }
+}
+
+/* Newsletter */
+.newsletter {
+  background: #0a0f14;
+  text-align: center;
+  padding: 40px 20px 100px 20px;
+  border-top: 1px solid #222;
+}
+
+.newsletter h2 {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding: 40px 0px 0px 0px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 60px 0px 0px 0px;
+}
+
+/* Input */
+.newsletter-form input {
+  padding: 12px 15px;
+  border: 2px solid #555;
+  border-radius: 25px;
+  outline: none;
+  width: 280px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #111;
+  color: #fff;
+}
+
+.newsletter-form input:focus {
+  border-color: #ff1a1a;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Botón */
+.newsletter-form button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #e50914; /* rojo Netflix */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.newsletter-form button:active {
+  background: #ff4d4d;
+  transform: scale(0.95);
+}
+
+
+.footer {
+  background: #0a0f14;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+/* Logo y nombre */
+.footer-section.logo h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.footer-section.logo h2 span {
+  color: red;
+}
+
+.footer-section.logo p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Sobre nosotros */
+.footer-section.about h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-section.about p {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+/* Redes sociales */
+.footer-section.social h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fff;
+  background: #111a22;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: red;
+  color: #fff;
+}
+
+/* Parte inferior */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #222;
+  padding-top: 12px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom span {
+  color: red;
+  font-weight: bold;
+}
+
+/* Parte adicional */
+/* Sección introductoria */
+.intro-section {
+  text-align: center;
+  padding: 120px 20px 80px 20px;
+  background: radial-gradient(circle at center, #0a0f14 0%, #000 100%);
+}
+
+.intro-section h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.intro-section h1 span {
+  color: #e50914;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,113 @@
+/* nav */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header principal */
+.container-header header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: black;
+  position: relative; /* necesario para el menú absoluto en móvil */
+}
+
+/* Ocultar el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Ícono hamburguesa */
+.menu-icon {
+  font-size: 28px;
+  color: #e50000;
+  cursor: pointer;
+  display: none;
+}
+
+/* Logo y nombre */
+.section-logo a,
+.section-logo h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.section-logo span {
+  color: red;
+  font-size: 30px;
+}
+
+/* Menu horizontal por defecto */
+.container-header header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container-header header nav ul li a {
+  font-family: 'Righteous', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background .12s;
+}
+
+.container-header header nav ul li a:hover {
+  color: #e70c0c;
+  background: rgba(255,255,255,0.03);
+}
+
+/* -------------------
+   Reglas para pantallas pequeñas
+   ------------------- */
+@media (max-width: 768px) {
+
+  /* Mostrar el icono hamburguesa */
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 1000;
+  }
+
+  /* Ocultar el menú horizontal (se mostrará el menú vertical) */
+  .container-header header nav ul {
+    display: none;                /* <- oculto por defecto en móvil */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: calc(100% - 40px);
+    max-width: 320px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(6px);   /* efecto borroso */
+    border-radius: 12px;
+    padding: 18px;
+    gap: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  }
+
+  /* Enlaces más grandes en móvil */
+  .container-header header nav ul li a {
+    font-size: 20px;
+    padding: 10px 12px;
+    color: #fff;
+  }
+
+  /* Mostrar menú cuando el checkbox esté activado */
+  #menu-toggle:checked ~ nav ul {
+    display: flex;
+  }
+}
